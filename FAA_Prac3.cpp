@@ -1,19 +1,56 @@
 // FAA_Prac3.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
+// Reutilizacion codigo prac 1
 
-#include <iostream>
+#include <iostream>   // Necesario para cout y cerr
+#include <vector>     // Necesario para vector
+#include <cstdlib>    // Necesario para rand y srand
+#include <fstream>    // Necesario para ofstream (manejo de archivos)
+#include <iomanip>    // Necesario para fixed y setprecision
+#include <algorithm>  // Necesario para min, max
+#include <chrono>     // Necesario para medir tiempos con chrono
+#include <random>     // Necesario para mt19937 y shuffle
+#include <limits>     // Necesario para numeric_limits
+#include "Algoritmos.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using namespace std;
+
+// ------------------------------- Constantes para varias las tallas -------------------------------
+
+// Numero de busquedas
+const int N_BUSQUEDAS = 10;
+// Talla inicial
+const int TALLA_INICIAL = 1000;
+// Talla final
+const int TALLA_FINAL = 10000;
+// Incremento entre iteraciones de la talla
+const int TALLA_INCREMENTO = 1000;
+
+
+// ------------------------------- Implementaciones ------------------------------- 
+
+
+
+int main() {
+
+	ofstream archivo("resultados$$$.csv");
+	if (!archivo.is_open()) {
+		cerr << "Error al abrir el archivo." << endl;
+		return 1;
+	}
+
+	// Inicializa el generador de números aleatorios
+	archivo << fixed << setprecision(6); // Fijar precisión decimal
+	archivo << "Tamano del Vector;Coste A1; Coste A2" << endl;
+
+	for (int n = TALLA_INICIAL; n <= TALLA_FINAL; n += TALLA_INCREMENTO) {
+		
+
+		//int p = Algoritmos.A1(n);
+		archivo << n << endl ;//<< ";" << ";"<< endl;
+	}
+
+	archivo.close();
+	cout << "Los resultados se han guardado en el archivo 'resultados.csv'." << endl;
+
+	return 0;
 }
-
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
-
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
