@@ -1,6 +1,2 @@
-﻿  Algoritmos.cpp
-C:\Users\javie\Documents\GitHub\UNI\FAA_Prac3\Algoritmos.cpp(22,21): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\javie\Documents\GitHub\UNI\FAA_Prac3\Algoritmos.cpp(39,20): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-  FAA_Prac3.cpp
-  Generando código...
-  FAA_Prac3.vcxproj -> C:\Users\javie\Documents\GitHub\UNI\FAA_Prac3\Debug\FAA_Prac3.exe
+﻿  FAA_Prac3.cpp
+  FAA_Prac3.vcxproj -> C:\Users\javie\Documents\Github\UNI\FAA_Prac3\Debug\FAA_Prac3.exe
